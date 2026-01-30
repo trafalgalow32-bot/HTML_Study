@@ -1,0 +1,31 @@
+/* position_style.css*/
+
+* { padding: 0; margin:0;}
+
+#box1{
+    width:100px;
+    height:100px;
+    background: gold;
+    left:50px;
+}
+
+#box2 {
+    width: 150px;
+    height: 150px;
+    background: coral;
+    position:relative;
+    right:100px;
+    top:50px;    
+}
+#box2:hover {
+    right:0px;    
+    transition: all 1s;
+}
+#box3 {
+    width:120px;
+    height:120px;
+    background: midnightblue;
+    position:absolute;
+    right:100px;
+    top:50px;
+}
