@@ -1,0 +1,35 @@
+/* 사진첩.css */
+
+.imgbox{
+    margin-top: 20px;
+    height: 300px;
+}
+.imgcard{
+    float:left;
+    height: 300px;
+    width: 150px;
+    margin:0 10px;
+}
+.imgcard img{
+    width: 100%;
+}
+
+.imgcard2{
+    height:300px;
+    width: 150px;
+    margin:0 10px;
+    float: left;
+}
+
+.imgcard2.a{
+    background: url("./4.jpg") no-repeat center;
+    background-size: cover;
+}
+.imgcard2.b{
+    background: url("./5.jpg") no-repeat center;
+    background-size: cover;
+}
+.imgcard2.c{
+    background: url("./6.jpg") no-repeat center;
+    background-size: cover;
+}

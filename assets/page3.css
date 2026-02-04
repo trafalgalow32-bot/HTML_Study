@@ -1,0 +1,84 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+#wrap{
+    width: 1200px;
+    position: relative;
+    margin:0px auto;
+}
+
+#header{
+    padding: 10px 20px; 
+}
+
+#logoWrap{
+    height: 70px;
+    float: left;
+    margin: 10px 0px 0px 30px;
+}
+
+#logoWrap img{
+    height: 100%;
+}
+
+#navBox{
+    height: 80px;
+}
+
+#nav{
+    float: right;
+    margin: 50px 70px 5px 0px;
+}
+
+.menuLink{
+    font-size: 20px; /* 글자크기 */
+    color: #003366;  /* 글자색상 */
+    text-decoration: none; /* 글자효과 */
+    font-weight: 500; /* 글자굵기 */
+    padding: 3px 7px;
+    margin: 0 20px;
+}
+
+#main{
+    height: 600px;
+}
+
+#my{
+    height: 120px;
+    background-color: #003366;
+    border-radius: 7px;
+}
+
+#myy{
+    height: 100px;
+    margin: 0px 0px 0px 50px;
+}
+
+#time{
+    height: 50px;
+    font-size: 45px;
+    color: #f1f1f1;
+    font-weight: 500;
+    padding: 10px 0 0 0;
+    margin: 10px 0px 0px 25px;
+}
+
+#time1{
+    height: 30px;
+    font-size: 30px;
+    color: #f1f1f1;
+    font-weight: 300;
+    margin: 20px 0 0 35px;
+}
+
+#footer{
+    height: 100px;
+    text-align: center;
+    padding: 25px;
+    background-color: #283b52;
+    border-radius: 7px;
+    color: white;
+}
