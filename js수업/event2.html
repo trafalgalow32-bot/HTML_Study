@@ -1,0 +1,64 @@
+<!-- event2.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>      
+        <style>
+        .inputField{
+            display:flex;
+            gap:15px;
+        }
+        </style>
+    <script>
+        function agecalcul() {
+            // 현재문서(document)에서 아이디가 age인 (ById) 태그(Element)를
+            // 가져와라(get)
+            // -> document.getElementById("age")
+            let ageTag = document.getElementById("age");
+            let age= ageTag.value;
+            alert(2026-age);
+            
+            // let now = new Date(); // 이놈이랑
+            // let year = now.getFullYear() // 이놈은 구글링 해서 얻은 아이디어
+            // alert(year-(age.value)+1); // 기존: 2026-(age.value)+1
+            
+            // let obj = document.querySelector("#userName");
+            // console.dir(obj);
+        }
+
+        function getAddress() {
+            // let addressEle = document.getElementById("address");
+            // let address = addressEle.value;
+            // let resultEle = document.getElementById("result");
+            // resultEle.value = address;
+
+            let input = document.getElementById("address");
+            let div = document.getElementById("result");
+
+            div.innerText = input.value;
+            //innerHTML , innerText
+            //innerHTML = "<input >";
+            //innerText = "<input >"
+            // div.innerText = "<input>";
+        }
+    </script>
+</head>
+<body>
+    <!--문제 : 나이를 입력하여 태어난 년도를 alert 출력하세요. -->
+    <div class="inputField">
+        <input type="number" name="age" id="age">
+        <button onclick="agecalcul()">나이 입력</button>
+    </div>
+    <!--문제 : 주소를 입력하여 div#result1에 출력하세요 
+    힌트: div 태그에는 value가 없어요. 대신 innerText에 넣으면 되요-->
+    <div class="inputField">
+        <input type="text" name="address" id="address">
+        <button onclick="getAddress()"> 주소 입력</button>
+    </div>
+    <div id="result">
+        <!-- <input type="text" name="result" id="result">         -->
+    </div>
+</body>
+</html>
