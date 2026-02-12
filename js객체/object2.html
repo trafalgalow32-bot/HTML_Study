@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <input type="text" id="keyword">
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>주소</th>
+                <th>취미</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <tr>
+                <td>이순신</td>
+                <td>34</td>
+                <td>통영시 어딘가</td>
+                <td>거북선으로 극딜</td>
+            </tr>
+            <tr>
+                <td>장보고</td>
+                <td>33</td>
+                <td>완도 청해진</td>
+                <td>당나라에서 신라로 귀순</td>
+            </tr>
+            <tr>
+                <td>양만춘</td>
+                <td>30</td>
+                <td>안시성</td>
+                <td>클로킹</td>
+            </tr>
+            <tr>
+                <td>을지문덕</td>
+                <td>35</td>
+                <td>살수 어딘가</td>
+                <td>클로킹</td>
+            </tr>
+            <tr>
+                <td>문익점</td>
+                <td>32</td>
+                <td>개성 어딘가</td>
+                <td>목화솜 수입업</td>
+            </tr>
+            <tr>
+                <td>최무선</td>
+                <td>31</td>
+                <td>미상</td>
+                <td>화포 제조</td>
+            </tr>
+            <tr>
+                <td>이방원</td>
+                <td>30</td>
+                <td>한양</td>
+                <td>쿠데타</td>
+            </tr>
+            <tr>
+                <td>이성순</td>
+                <td>38</td>
+                <td>평양</td>
+                <td>박치기</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</body>
+</html>
+<script>
+    let key = document.getElementById("keyword");
+
+    key.addEventListener('keyup', function(){
+        const rows = Array.from (document.querySelectorAll("#tableBody tr"));
+
+        let value = this.value;
+        // 입력한 텍스트가 포함된 tr(줄) 만 찾기
+        const res = rows.filter( row => 
+                row.textContent.toLowerCase().includes(value));
+
+        // 테이블에 전체 감추기
+        rows.forEach( row => row.style.display="none");
+
+        // 찾은 tr만 보이기
+        res.forEach( row => row.style.display="");
+
+
+    });
+
+</script>
