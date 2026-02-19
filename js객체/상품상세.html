@@ -1,0 +1,97 @@
+<!-- 상품상세.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품상세</title>
+    <style>
+
+        #wrap{
+            display:flex;
+            gap:20px;
+        }
+        img { width:100%;}
+
+        .left{
+            width:300px;
+            padding:20px;
+            position: relative;
+        }
+        .slideBox{
+            position: relative;
+            overflow: hidden;
+            height:300px;
+        }
+        .slide{
+            list-style: none;
+            padding:0;
+            margin:0;
+            display:flex;
+            position:absolute;
+        }
+        .slideItem {
+            width:300px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+
+        <div class="left">
+            <div class="slideBox">
+                <ul class="slide">
+                    <li class="slideItem">
+                        <img class="item">
+                    </li>
+                    <li class="slideItem">
+                        <img class="item">
+                    </li>
+                    <li class="slideItem">
+                        <img class="item">
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="right">
+            <h3> 운동화 </h3>
+            <p>가격 : 150,000원</p>
+            <div>
+                <select id="size">
+                    <option value="265">265</option>
+                    <option value="270">270</option>
+                    <option value="275">275</option>
+                    <option value="280">280</option>
+                </select>
+        </div>
+        <div>
+            수량 : <input type="number" min="1" max="10" value="1">
+        </div>
+        <button id="cart">장바구니</button>
+        <button id="buy">구매</button>
+
+    </div>
+</body>
+</html>
+<script>
+    const imgList = ["1.jpg", "2.jpg", "3.jpg"];
+
+    const item = document.getElementsByClassName("item");
+    for(var i in item){
+        item[i].src = "./"+imgList[i];
+    }
+
+    setInterval( function(){
+        // 이미지 슬라이드 만들기
+        
+    }, 3000 );
+
+    // setInterval( 함수(실행내용) , 시간(ms) );
+
+    // 이미지를 3초에 한번씩 이동시켜서 보이게 하기
+    // 시간을 다루는 함수 : setTimeout, setInterval
+    // setTimeout :  지정한 시간 이후에 한번만 실행
+    // setInterval : 지정한 시간 간격으로 실행
+</script>
